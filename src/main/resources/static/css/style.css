@@ -1,0 +1,75 @@
+@charset "UTF-8";
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.06);
+  --text: #eaf0ff;
+  --muted: rgba(234,240,255,0.75);
+  --accent: #6ea8fe;
+}
+
+body{
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(110,168,254,0.25), transparent 60%),
+              radial-gradient(900px 500px at 90% 30%, rgba(180,120,255,0.18), transparent 55%),
+              var(--bg);
+  color: var(--text);
+}
+
+.navbar{
+  background: rgba(11,18,32,0.65) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+}
+
+.glass{
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+
+.muted{ color: var(--muted); }
+
+.badge-skill{
+  background: rgba(110,168,254,0.18);
+  color: var(--text);
+  border: 1px solid rgba(110,168,254,0.25);
+  font-weight: 500;
+}
+
+a.link{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.35);
+}
+a.link:hover{
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/*.profile-img{
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+}*/
+
+.profile-img {
+  width: 140px;
+  height: 140px; /* Making it a perfect square often looks cleaner */
+  object-fit: cover;
+  object-position: top; /* Ensures the crop focuses on your head/shoulders */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds depth */
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* Interactive feel for visitors */
+}
